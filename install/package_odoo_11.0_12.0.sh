@@ -16,14 +16,16 @@ apt-get install -y --no-install-recommends \
     node-clean-css \
     node-less \
     poppler-utils \
-    python \
-    python-libxslt1 \
-    python-pip \
-    python3-pip \
-    python3-setuptools \
-    python3-renderpm \
     libxslt1.1 \
     xfonts-75dpi \
     xfonts-base \
     xz-utils \
     tcl expect
+
+cd ~/
+wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+tar xvf Python-3.6.4.tgz
+cd ~/Python-3.6.4
+./configure --enable-optimizations
+make -j8
+make install
